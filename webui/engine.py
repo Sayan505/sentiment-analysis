@@ -1,4 +1,12 @@
+import re
+
 import pickle
+
+import nltk
+from   nltk.stem   import WordNetLemmatizer
+from   nltk.corpus import stopwords
+
+
 
 
 class Engine:
@@ -24,7 +32,7 @@ class Engine:
             return
 
 
-        labels = f.read().split()
+        labels = f.read().split(",")
         f.close()
 
         self.status["status"] = "ok"
@@ -70,10 +78,38 @@ class Engine:
 
         return model
     
+
+    def preprocess(self, text):
+        res = str()
+        
+        text = text.lower()
+
+        # regexes
+        url = r"((http://)[^ ]*|(https://)[^ ]*|( www\.)[^ ]*)"
+        usr_name = r"@[^\s]+"
+        non_numalpha = r"[^a-zA-Z0-9]"
+
+        # apply them
+        text = re.sub(url, " URL", text)        # remove urls
+        text = re.sub(usr_name, " USER", text)  # remove user tags
+        text = re.sub(non_numalpha, " ", text)  # remove special chars
+
+        
+        # remove stopwords and lemmatize  the rest
+        for token in text.split():
+            if token not in self.stop_words:
+                token = self.lemmatizer.lemmatize(token)
+                res += (token + ' ')
+
+        return res
+    
+
     def predict(self, text):
         if self.status["status"] != "ok": return { "error": "check status" }
         
         result = {}
+
+        test = self.preprocess(text)
 
         text = self.vectorizer.transform([text])
         pred = self.model.predict_proba(text)
@@ -89,3 +125,13 @@ class Engine:
         self.labels     = self.__load_labels()
         self.vectorizer = self.__load_vectorizer()
         self.model      = self.__load_model()
+
+        nltk.download('stopwords')
+        nltk.download('wordnet')
+
+        self.lemmatizer = WordNetLemmatizer()
+        self.stop_words = stopwords.words("english")
+
+
+
+
