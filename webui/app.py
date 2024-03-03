@@ -1,6 +1,6 @@
-import engine
+from engine import Engine
 
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template
 
 
 
@@ -8,7 +8,8 @@ from flask import Flask, request, render_template, jsonify
 app = Flask(__name__)
 
 
-status = engine.load_model()
+# init prediction engine
+model = Engine()
 
 
 @app.route("/")
@@ -23,16 +24,15 @@ def not_found(e):
 
 @app.route("/api/predict_sentiment", methods=["POST"])
 def predict_sentiment():
-    req    = request.json
+    req   = request.json
 
-    query  = str(req["query"])
+    query = str(req["query"])
 
-    
-    result = str(engine.predict(query))
+    res   = model.predict(query)
 
-    return jsonify({ "prediction": result })
+    return res
 
 
 @app.route("/api/status", methods=["GET"])
 def get_status():
-    return status
+    return model.status

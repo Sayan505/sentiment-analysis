@@ -1,70 +1,91 @@
-import sys
-
 import pickle
 
-from sklearn.linear_model import LogisticRegression
-from sklearn.feature_extraction.text import TfidfVectorizer
+
+class Engine:
+    __labels_path     = "../model/emotions.csv"
+    __vectorizer_path = "../model/vectorizer.pickle"
+    __model_path      = "../model/DTCModel.pickle"
 
 
-
-status = { "error" : "Not Yet Loaded" }
-
-vectorizer = None
-LRModel    = None
-
-
-def load_model():
-    global status
-    global vectorizer
-    global LRModel
-
-    vectorizer_path = "../model/vectorizer.pickle"
-    model_path = "../model/LRModel.pickle"
-
-
-    try:
-        f = open(vectorizer_path, "rb")
-
-    except OSError:
-        error_str = "Error Loading Vectorizer"
-        print(error_str)
-        status = { "error": error_str }
-
-        return status
-
-    vectorizer = pickle.load(f)
-    f.close()
+    status = {
+            "status"     : "error",
+            "labels"     : "",
+            "vectorizer" : "",
+            "model"      : ""
+        }
+    
+    
+    def __load_labels(self):
+        try:
+            f = open(self.__labels_path, "r")
+        except OSError:
+            self.status["status"] = "error"
+            self.status["labels"] = "error"
+            return
 
 
-    try:
-        f = open(model_path, "rb")
+        labels = f.read().split()
+        f.close()
 
-    except OSError:
-        error_str = "Error Loading Model"
-        print(error_str)
-        status = { "error": error_str }
+        self.status["status"] = "ok"
+        self.status["labels"] = self.__labels_path
 
-        return status
-
-    LRModel = pickle.load(f)
-    f.close()
+        return labels
 
 
-    status = { "model" : model_path, "vectorizer" : vectorizer_path }
+    def __load_vectorizer(self):
+        try:
+            f = open(self.__vectorizer_path, "rb")
+        except OSError:
+            self.status["status"]     = "error"
+            self.status["vectorizer"] = "error"
+            return
 
-    return status
+
+        vectorizer = pickle.load(f)
+        f.close()
+
+        self.status["status"] = "ok"
+        self.status["vectorizer"] = self.__vectorizer_path
+
+        return vectorizer
 
 
-def predict(text):
-    if "error" in status: return "!<ERROR>: Check status."
+    def __load_model(self):
+        try:
+            f = open(self.__model_path, "rb")
+        except OSError:
+            self.status["status"] = "error"
+            self.status["model"]  = "error"
+            return
 
 
-    text      = vectorizer.transform([text])
-    sentiment = LRModel.predict(text)
+        model = pickle.load(f)
+        f.close()
 
-    result = "Error"
+        model.verbose = 0
 
-    if(sentiment   == 1): result = "Positive"
-    elif(sentiment == 0): result = "Negative"
+        self.status["status"] = "ok"
+        self.status["model"] = self.__model_path
 
-    return result
+        return model
+    
+    def predict(self, text):
+        if self.status["status"] != "ok": return { "error": "check status" }
+        
+        result = {}
+
+        text = self.vectorizer.transform([text])
+        pred = self.model.predict_proba(text)
+
+        for i in range(len(pred)):
+            result[self.labels[i]] = round(pred[i][0][1] * 100, 2)
+        
+        
+        return result
+    
+
+    def __init__(self):
+        self.labels     = self.__load_labels()
+        self.vectorizer = self.__load_vectorizer()
+        self.model      = self.__load_model()
