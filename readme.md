@@ -32,13 +32,27 @@ Response JSON:
 	"joy": 0.0,
 	"love": 0.0,
 	"nervousness": 0.0,
-	"neutral": 0.0,
 	"optimism": 0.0,
 	"pride": 0.0,
 	"realization": 0.0,
 	"relief": 0.0,
 	"remorse": 0.0,
 	"sadness": 0.0,
-	"surprise": 0.0
+	"surprise": 0.0,
+	"neutral": 0.0
+}
+```
+
+### Status Page:  
+
+URI (GET): `<baseurl>/api/status`  
+
+Response JSON:
+```json
+{
+	"status": "ok",
+	"labels": "../model/emotions.csv",
+	"vectorizer": "../model/vectorizer.pickle",
+	"model": "../model/DTCModel.pickle"
 }
 ```

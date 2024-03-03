@@ -6,6 +6,7 @@ from flask import Flask, request, render_template
 
 
 app = Flask(__name__)
+app.json.sort_keys = False
 
 
 # init prediction engine
