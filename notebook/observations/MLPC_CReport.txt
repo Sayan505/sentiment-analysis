@@ -1,0 +1,243 @@
+training time: ~52000 seconds => ~14.5 hrs.
+
+MLPClassifier(activation='logistic', hidden_layer_sizes=(18, 18), verbose=100)
+
+Iteration 1, loss = 5.79631135
+Iteration 2, loss = 4.44723209
+Iteration 3, loss = 4.44185654
+Iteration 4, loss = 4.43181901
+Iteration 5, loss = 4.40589929
+Iteration 6, loss = 4.27396881
+Iteration 7, loss = 4.07026124
+Iteration 8, loss = 3.91133574
+Iteration 9, loss = 3.73930009
+Iteration 10, loss = 3.59576881
+Iteration 11, loss = 3.48522140
+Iteration 12, loss = 3.38988881
+Iteration 13, loss = 3.29856468
+Iteration 14, loss = 3.21280850
+Iteration 15, loss = 3.13588726
+Iteration 16, loss = 3.06602739
+Iteration 17, loss = 3.00301207
+Iteration 18, loss = 2.94692238
+Iteration 19, loss = 2.89790959
+Iteration 20, loss = 2.85565527
+Iteration 21, loss = 2.81910453
+Iteration 22, loss = 2.78695454
+Iteration 23, loss = 2.75838689
+Iteration 24, loss = 2.73179098
+Iteration 25, loss = 2.70632010
+Iteration 26, loss = 2.68116453
+Iteration 27, loss = 2.65516030
+Iteration 28, loss = 2.62759522
+Iteration 29, loss = 2.59966372
+Iteration 30, loss = 2.57124430
+Iteration 31, loss = 2.54393930
+Iteration 32, loss = 2.51853897
+Iteration 33, loss = 2.49547253
+Iteration 34, loss = 2.47454720
+Iteration 35, loss = 2.45598905
+Iteration 36, loss = 2.43841560
+Iteration 37, loss = 2.42243873
+Iteration 38, loss = 2.40800217
+Iteration 39, loss = 2.39439332
+Iteration 40, loss = 2.38227714
+Iteration 41, loss = 2.37019660
+Iteration 42, loss = 2.36000232
+Iteration 43, loss = 2.35016679
+Iteration 44, loss = 2.34110002
+Iteration 45, loss = 2.33266141
+Iteration 46, loss = 2.32492721
+Iteration 47, loss = 2.31749902
+Iteration 48, loss = 2.31042550
+Iteration 49, loss = 2.30390866
+Iteration 50, loss = 2.29744927
+Iteration 51, loss = 2.29098494
+Iteration 52, loss = 2.28531961
+Iteration 53, loss = 2.27970058
+Iteration 54, loss = 2.27400359
+Iteration 55, loss = 2.26875970
+Iteration 56, loss = 2.26304714
+Iteration 57, loss = 2.25819553
+Iteration 58, loss = 2.25315004
+Iteration 59, loss = 2.24813799
+Iteration 60, loss = 2.24339583
+Iteration 61, loss = 2.23870133
+Iteration 62, loss = 2.23379135
+Iteration 63, loss = 2.22967055
+Iteration 64, loss = 2.22558367
+Iteration 65, loss = 2.22150486
+Iteration 66, loss = 2.21697765
+Iteration 67, loss = 2.21302455
+Iteration 68, loss = 2.20921459
+Iteration 69, loss = 2.20513425
+Iteration 70, loss = 2.20150253
+Iteration 71, loss = 2.19754710
+Iteration 72, loss = 2.19426897
+Iteration 73, loss = 2.19068866
+Iteration 74, loss = 2.18727191
+Iteration 75, loss = 2.18394422
+Iteration 76, loss = 2.18069421
+Iteration 77, loss = 2.17718681
+Iteration 78, loss = 2.17450565
+Iteration 79, loss = 2.17167181
+Iteration 80, loss = 2.16839610
+Iteration 81, loss = 2.16548197
+Iteration 82, loss = 2.16282151
+Iteration 83, loss = 2.16002576
+Iteration 84, loss = 2.15741439
+Iteration 85, loss = 2.15456585
+Iteration 86, loss = 2.15194826
+Iteration 87, loss = 2.14948240
+Iteration 88, loss = 2.14705484
+Iteration 89, loss = 2.14483003
+Iteration 90, loss = 2.14243996
+Iteration 91, loss = 2.13995037
+Iteration 92, loss = 2.13787064
+Iteration 93, loss = 2.13552002
+Iteration 94, loss = 2.13327755
+Iteration 95, loss = 2.13160159
+Iteration 96, loss = 2.12931069
+Iteration 97, loss = 2.12757722
+Iteration 98, loss = 2.12565044
+Iteration 99, loss = 2.12355981
+Iteration 100, loss = 2.12161849
+Iteration 101, loss = 2.12008698
+Iteration 102, loss = 2.11786711
+Iteration 103, loss = 2.11614638
+Iteration 104, loss = 2.11461866
+Iteration 105, loss = 2.11305869
+Iteration 106, loss = 2.11100970
+Iteration 107, loss = 2.10968164
+Iteration 108, loss = 2.10789620
+Iteration 109, loss = 2.10627618
+Iteration 110, loss = 2.10499063
+Iteration 111, loss = 2.10353215
+Iteration 112, loss = 2.10182193
+Iteration 113, loss = 2.10056660
+Iteration 114, loss = 2.09900262
+Iteration 115, loss = 2.09756838
+Iteration 116, loss = 2.09629371
+Iteration 117, loss = 2.09476375
+Iteration 118, loss = 2.09375416
+Iteration 119, loss = 2.09217846
+Iteration 120, loss = 2.09104937
+Iteration 121, loss = 2.08990289
+Iteration 122, loss = 2.08871376
+Iteration 123, loss = 2.08739744
+Iteration 124, loss = 2.08646121
+Iteration 125, loss = 2.08505354
+Iteration 126, loss = 2.08396301
+Iteration 127, loss = 2.08299999
+Iteration 128, loss = 2.08184040
+Iteration 129, loss = 2.08083093
+Iteration 130, loss = 2.07943344
+Iteration 131, loss = 2.07857884
+Iteration 132, loss = 2.07754735
+Iteration 133, loss = 2.07674788
+Iteration 134, loss = 2.07554331
+Iteration 135, loss = 2.07441433
+Iteration 136, loss = 2.07371449
+Iteration 137, loss = 2.07260291
+Iteration 138, loss = 2.07180851
+Iteration 139, loss = 2.07111734
+Iteration 140, loss = 2.06998850
+Iteration 141, loss = 2.06914619
+Iteration 142, loss = 2.06821366
+Iteration 143, loss = 2.06729296
+Iteration 144, loss = 2.06662373
+Iteration 145, loss = 2.06550920
+Iteration 146, loss = 2.06454357
+Iteration 147, loss = 2.06410968
+Iteration 148, loss = 2.06307687
+Iteration 149, loss = 2.06241277
+Iteration 150, loss = 2.06161486
+Iteration 151, loss = 2.06077701
+Iteration 152, loss = 2.05978986
+Iteration 153, loss = 2.05925743
+Iteration 154, loss = 2.05854692
+Iteration 155, loss = 2.05760784
+Iteration 156, loss = 2.05719709
+Iteration 157, loss = 2.05620898
+Iteration 158, loss = 2.05543812
+Iteration 159, loss = 2.05479770
+Iteration 160, loss = 2.05394274
+Iteration 161, loss = 2.05343373
+Iteration 162, loss = 2.05257780
+Iteration 163, loss = 2.05184146
+Iteration 164, loss = 2.05145954
+Iteration 165, loss = 2.05039456
+Iteration 166, loss = 2.04986524
+Iteration 167, loss = 2.04907267
+Iteration 168, loss = 2.04850069
+Iteration 169, loss = 2.04773379
+Iteration 170, loss = 2.04705383
+Iteration 171, loss = 2.04640814
+Iteration 172, loss = 2.04597620
+Iteration 173, loss = 2.04524548
+Iteration 174, loss = 2.04465166
+Iteration 175, loss = 2.04392516
+Iteration 176, loss = 2.04312981
+Iteration 177, loss = 2.04244464
+Iteration 178, loss = 2.04201267
+Iteration 179, loss = 2.04105593
+Iteration 180, loss = 2.04075394
+Iteration 181, loss = 2.04020500
+Iteration 182, loss = 2.03976612
+Iteration 183, loss = 2.03878924
+Iteration 184, loss = 2.03820804
+Iteration 185, loss = 2.03779954
+Iteration 186, loss = 2.03720093
+Iteration 187, loss = 2.03658414
+Iteration 188, loss = 2.03571633
+Iteration 189, loss = 2.03539980
+Iteration 190, loss = 2.03463099
+Iteration 191, loss = 2.03431997
+Iteration 192, loss = 2.03385514
+Iteration 193, loss = 2.03302627
+Iteration 194, loss = 2.03250026
+Iteration 195, loss = 2.03214857
+Iteration 196, loss = 2.03110604
+Iteration 197, loss = 2.03103695
+Iteration 198, loss = 2.03010916
+Iteration 199, loss = 2.02986655
+Iteration 200, loss = 2.02950483
+
+
+		precision    recall  f1-score   support
+
+           0       0.54      0.42      0.47       843
+           1       0.56      0.43      0.49       499
+           2       0.42      0.20      0.27       386
+           3       0.24      0.12      0.16       648
+           4       0.31      0.12      0.17       881
+           5       0.31      0.17      0.22       327
+           6       0.30      0.15      0.20       370
+           7       0.39      0.19      0.25       489
+           8       0.29      0.11      0.16       184
+           9       0.24      0.10      0.14       431
+          10       0.34      0.21      0.26       581
+          11       0.54      0.21      0.30       303
+          12       0.31      0.16      0.22       122
+          13       0.25      0.10      0.14       294
+          14       0.52      0.40      0.45       184
+          15       0.79      0.75      0.77       595
+          16       0.14      0.03      0.04        38
+          17       0.41      0.28      0.33       420
+          18       0.65      0.43      0.52       430
+          19       0.26      0.11      0.15        83
+          20       0.43      0.28      0.34       417
+          21       0.17      0.10      0.12        52
+          22       0.24      0.09      0.13       438
+          23       0.18      0.09      0.12        64
+          24       0.35      0.18      0.24       135
+          25       0.43      0.21      0.29       325
+          26       0.42      0.32      0.36       288
+          27       0.51      0.36      0.42      2726
+
+   micro avg       0.46      0.28      0.35     12553
+   macro avg       0.38      0.22      0.28     12553
+weighted avg       0.43      0.28      0.33     12553
+ samples avg       0.30      0.29      0.28     12553
+
+Hamming Loss:  0.0451
